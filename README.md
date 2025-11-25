@@ -27,6 +27,10 @@ The project is structured into several tasks:
     * **Few-Shot**: Providing balanced demonstration examples (2 per class) in the context window to improve performance.
 4.  **Evaluation**: Computing metrics (Accuracy, Macro F1-Score) and generating confusion matrices.
 
+   
+**Prompting Strategies Explored**:
+   * Zero-Shot Inference: The models are provided with the category definitions and the input text, forcing them to rely solely on their pre-trained knowledge to classify the content.
+   * Few-Shot Inference: The prompts are dynamically augmented with balanced demonstration examples (2 per class) to guide the model's reasoning and output formatting.
 ### Models Evaluated
 The following open-source models were implemented and tested in this notebook:
 * **Microsoft Phi-3-mini-4k-instruct**
@@ -39,9 +43,9 @@ The project uses a subset of the EDOS dataset provided by the course instructors
 * `demonstrations.csv`: Pool of examples used for few-shot prompting.
 
 ## Observations
--Mistral-7B benefited significantly from few-shot prompting, improving Accuracy by ~10%.
+* Mistral-7B demonstrated a significant performance boost (~10% accuracy increase) when transitioning from Zero-Shot to Few-Shot prompting, indicating strong in-context learning abilities.
 
--Phi-3-mini showed robust zero-shot performance but did not gain significantly from few-shot examples in this specific setup.
+* Phi-3-mini showed impressive baseline performance for its size in Zero-Shot scenarios but benefited less from the specific few-shot examples provided, suggesting a different sensitivity to prompt context.
 
 ## Project Structure
 The notebook nlp2.ipynb is organized into the following tasks:
@@ -58,6 +62,12 @@ The notebook nlp2.ipynb is organized into the following tasks:
 * Task 6: Error Analysis - Generates confusion matrices and summarizes model behaviors.
 
 * Task 7: Report - Guidelines for summarizing the experiment.
+
+
+## Academic Context
+This project was developed as part of the Natural Language Processing (NLP) course.
+* Instructors/Credits: Federico Ruggeri, Eleonora Mancini, Paolo Torroni.
+* Dataset Source: A subset of the official EDOS dataset (SemEval-2023 Task 10)
 
 ## License
 This project is created for academic purposes. The dataset and task definition are based on the EDOS Challenge.
