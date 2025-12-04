@@ -4,6 +4,10 @@ This repository contains the solution for **Assignment 2** of the NLP course. Th
 
 **Credits:** Federico Ruggeri, Eleonora Mancini, Paolo Torroni
 
+## 👥 Authors
+* **Omid Nejati**
+* **Alireza Shahidiani**
+
 ## 📋 Project Overview
 
 The goal of this project is to perform **multi-class classification** on textual data to detect and categorize sexism. Unlike traditional fine-tuning approaches, this assignment explores the capabilities of pre-trained LLMs using **Zero-Shot** and **Few-Shot** prompting strategies.
